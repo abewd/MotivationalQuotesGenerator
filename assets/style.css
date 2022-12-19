@@ -6,31 +6,71 @@
 /* I have placed a border around this to help me see where the margin and padding limits are here
 so that we can adjust them in the future to fit neatly and nicely on all devices */
 body {
-  border: solid 1px black;
+  border: solid 1px rgb(232, 232, 232);
 }
 
 .header {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
   margin: 5%;
-  border: solid 1px black;
+  border: solid 1px rgb(232, 232, 232);
 }
 
 .miniParagraph {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-style: italic;
   color: rgb(82, 81, 81);
 }
 
-.apiLocations {
-  margin: 2%;
+.apiBackground {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0%;
   /* We can edit this later to adjust the size of the images 
   and the size of the text when we apply the API's */
   padding: 200px;
   text-align: center;
-  border: dotted 1px red;
+  border: dotted 1px rgb(255, 190, 190);
+}
+
+.apiText {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 2%;
+  /* We can edit this later to adjust the size of the images 
+    and the size of the text when we apply the API's */
+  padding: 200px;
+  text-align: center;
+  border: dotted 1px rgb(255, 190, 190);
+}
+
+.footerHeader {
+  text-shadow: 5px;
+  font-size: large;
+  font-weight: 700;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  justify-content: center;
+  display: flex;
+  padding: 0%;
+  margin: 0%;
+}
+
+li {
+  font-weight: 700;
 }
 
 .footer {
+  font-size: small;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   justify-content: center;
   display: flex;
-  word-spacing: 3px;
+  word-spacing: 0px;
+  padding: 5px;
+  margin: 5px;
+}
+
+/* Use this to edit footer anchor texts */
+a {
+  font-size: small;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 15px;
+  border: 5px;
 }
