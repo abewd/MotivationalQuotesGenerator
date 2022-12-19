@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
+/* I have placed a border around this to help me see where the margin and padding limits are here
+so that we can adjust them in the future to fit neatly and nicely on all devices */
+body {
+  border: dotted 1px black;
+}
+
+.header {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  margin: 2%;
+  border: solid 1px rgb(89, 87, 87);
+}
+
+.localStorage {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  font-size: small;
+  border: solid 1px rgb(89, 87, 87);
+  margin: 2px;
+}
+
+.miniParagraph {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: italic;
+  color: rgb(82, 81, 81);
+}
+
+.apiBackground {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0%;
+  /* We can edit this later to adjust the size of the images 
+  and the size of the text when we apply the API's */
+  padding: 20px;
+  text-align: center;
+  border: solid 1px blue;
+}
+
+.apiText {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 1%;
+  /* We can edit this later to adjust the size of the images 
+    and the size of the text when we apply the API's */
+  padding: 200px;
+  text-align: center;
+  border: solid 1px red;
+}
+
+.footerHeader {
+  text-shadow: 5px;
+  font-size: large;
+  font-weight: 700;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  justify-content: center;
+  display: flex;
+  padding: 0%;
+  margin: 3%;
+}
+
+/* use this to edit li text mainly in the "Contact Us" text  */
+li {
+  font-weight: 700;
+}
+
+.footer {
+  font-size: small;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  justify-content: center;
+  display: flex;
+  word-spacing: 0px;
+  padding: 5px;
+  margin: 2px;
+}
+
+/* Use this to edit footer anchor texts */
+a {
+  font-size: small;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 40px;
+  border: 3px;
+}
