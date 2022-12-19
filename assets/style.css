@@ -22,7 +22,15 @@ body {
 
 .apiLocations {
   margin: 2%;
+  /* We can edit this later to adjust the size of the images 
+  and the size of the text when we apply the API's */
   padding: 200px;
   text-align: center;
   border: dotted 1px red;
+}
+
+.footer {
+  justify-content: center;
+  display: flex;
+  word-spacing: 3px;
 }
