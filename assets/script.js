@@ -1,5 +1,5 @@
 var openModal = document.querySelector("#modalBtn");
-var modalBox = document.getElementsByClassName("modal")[0];
+var modalBox = document.querySelector("#myModal");
 var closeModal = document.querySelector(".close");
 var submitBtn = document.querySelector("#submitGoal");
 
