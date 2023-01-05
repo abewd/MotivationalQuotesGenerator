@@ -42,6 +42,7 @@ Implement modals in the program (I don't know what modals are)
 Implement styling through CSS and/or Bootstrap
 To make the application interactive we need to have a flexbox, adjust resolution to work with iphone/androids/tablets and also animate buttons
 Add a footer with social media hyperlinks
+
 Page 2
 MODAL:
 When you open the page a modal will appear for input...

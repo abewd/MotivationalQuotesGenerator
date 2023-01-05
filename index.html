@@ -22,10 +22,29 @@
         </div>
       </header>
     </div>
-
+    
     <!-- Here we will have the local storage text appear after input in the modal-->
+    <!-- Open The Modal Button -->
+    <button id="modalBtn">Enter My Goals</button>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+    <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modalh3">
+          <h3>My Goals</h3>
+          <span class="close">&times;</span>
+        </div>
+        
+          <label for="userName">Name: </label>
+          <input id="userName" type="text" placeholder="Enter your name"
+          <label for="myGoal">Goals: </label>
+          <input id="myGoal" type="text" placeholder="Enter your goals">
+          <button id="submitGoal">Submit</button>
+        
+      </div>
+    </div>
     <div class="localStorage">
-      <p>Hello (name), your goal today is to (insert goal here)</p>
+      <p>Hello <span id="savedUser">(name)</span>, your goal today is <span id="savedGoal">(insert goal here)</span></p>
     </div>
 
     <!-- This is the main section where API1 will generate random background photos -->
@@ -67,5 +86,6 @@
         </li>
       </div>
     </footer>
+    <script src="./assets/script.js"></script>
   </body>
 </html>
