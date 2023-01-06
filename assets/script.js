@@ -47,9 +47,30 @@ submitBtn.addEventListener("click", function () {
   console.log("Saving!");
   saveToLocal();
   modalBox.style.display = "none";
+  getImg()
 });
 
 
 printGoal()
 
-//testing push
+var accessKey = process.env.ACCESS_KEY
+var getUrl = "https://api.unsplash.com/photos/random/?client_id=" + accessKey
+var randomImg = document.querySelector("#randomImg")
+var imgSource = document.querySelector("#imgLink")
+var imgCreator = document.querySelector("#creator")
+var lastImg = localStorage.getItem("lastImg")
+function getImg (){
+fetch(getUrl)
+  .then(function (response){
+    return response.json();
+  })
+  .then(function(data){
+    console.log(data)
+    randomImg.src = data.urls.regular
+    imgSource.setAttribute("href", data.links.html)
+    imgCreator.textContent = data.user.name
+    imgCreator.setAttribute("href", data.user.portfolio_url)
+    localStorage.setItem("lastImg", data.urls.regular)
+  })
+}
+randomImg.src = lastImg
