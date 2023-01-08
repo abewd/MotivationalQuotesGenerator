@@ -53,12 +53,14 @@ submitBtn.addEventListener("click", function () {
 
 printGoal()
 
-var accessKey = process.env.ACCESS_KEY
+var accessKey = "aoHR-Un2l_uxsLT6clT61cCEzrmim18upkshDbMvrPU" 
+// process.env.ACCESS_KEY
 var getUrl = "https://api.unsplash.com/photos/random/?client_id=" + accessKey
 var randomImg = document.querySelector("#randomImg")
 var imgSource = document.querySelector("#imgLink")
 var imgCreator = document.querySelector("#creator")
 var lastImg = localStorage.getItem("lastImg")
+var randomQuote = document.querySelector("#quote")
 function getImg (){
 fetch(getUrl)
   .then(function (response){
@@ -71,6 +73,26 @@ fetch(getUrl)
     imgCreator.textContent = data.user.name
     imgCreator.setAttribute("href", data.user.portfolio_url)
     localStorage.setItem("lastImg", data.urls.regular)
+    getQuote()
   })
 }
 randomImg.src = lastImg
+
+function getQuote() {
+  const options = {
+    method: 'GET',
+    headers: {
+      'X-RapidAPI-Key': '754b4e35d4msh554b1fa15fcc530p1b2c10jsncbfab6b043ef',
+      'X-RapidAPI-Host': 'quotes15.p.rapidapi.com'
+    }
+  };
+  
+  fetch('https://quotes15.p.rapidapi.com/quotes/random/', options)
+    .then(response => response.json())
+    .then(response => console.log(response))
+    .catch(err => console.error(err));
+  randomQuote.textContent = response.content
+  
+
+  
+}
