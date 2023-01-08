@@ -48,13 +48,13 @@ submitBtn.addEventListener("click", function () {
   saveToLocal();
   modalBox.style.display = "none";
   getImg()
+  getQuote()
 });
 
 
 printGoal()
 
-var accessKey = "aoHR-Un2l_uxsLT6clT61cCEzrmim18upkshDbMvrPU" 
-// process.env.ACCESS_KEY
+var accessKey = process.env.ACCESS_KEY
 var getUrl = "https://api.unsplash.com/photos/random/?client_id=" + accessKey
 var randomImg = document.querySelector("#randomImg")
 var imgSource = document.querySelector("#imgLink")
@@ -73,11 +73,13 @@ fetch(getUrl)
     imgCreator.textContent = data.user.name
     imgCreator.setAttribute("href", data.user.portfolio_url)
     localStorage.setItem("lastImg", data.urls.regular)
-    getQuote()
+    
   })
 }
+//retrieve img & quote saved in local storage so it appears on page even after refreshing
 randomImg.src = lastImg
-
+randomQuote.textContent = savedQuote
+//fetch API for random quote
 function getQuote() {
   const options = {
     method: 'GET',
@@ -89,10 +91,11 @@ function getQuote() {
   
   fetch('https://quotes15.p.rapidapi.com/quotes/random/', options)
     .then(response => response.json())
-    .then(response => console.log(response))
-    .catch(err => console.error(err));
-  randomQuote.textContent = response.content
-  
-
-  
+    .then(function(data){
+      console.log(data)
+      randomQuote.textContent = "'" + data.content + "'"
+      localStorage.setItem("savedQuote", data.content)
+    })
+    .catch(err => console.error(err)); 
 }
+
