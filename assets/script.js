@@ -48,6 +48,7 @@ submitBtn.addEventListener("click", function () {
   saveToLocal();
   modalBox.style.display = "none";
   getImg()
+  getQuote()
 });
 
 
@@ -59,6 +60,7 @@ var randomImg = document.querySelector("#randomImg")
 var imgSource = document.querySelector("#imgLink")
 var imgCreator = document.querySelector("#creator")
 var lastImg = localStorage.getItem("lastImg")
+var randomQuote = document.querySelector("#quote")
 function getImg (){
 fetch(getUrl)
   .then(function (response){
@@ -71,6 +73,29 @@ fetch(getUrl)
     imgCreator.textContent = data.user.name
     imgCreator.setAttribute("href", data.user.portfolio_url)
     localStorage.setItem("lastImg", data.urls.regular)
+    
   })
 }
+//retrieve img & quote saved in local storage so it appears on page even after refreshing
 randomImg.src = lastImg
+randomQuote.textContent = savedQuote
+//fetch API for random quote
+function getQuote() {
+  const options = {
+    method: 'GET',
+    headers: {
+      'X-RapidAPI-Key': '754b4e35d4msh554b1fa15fcc530p1b2c10jsncbfab6b043ef',
+      'X-RapidAPI-Host': 'quotes15.p.rapidapi.com'
+    }
+  };
+  
+  fetch('https://quotes15.p.rapidapi.com/quotes/random/', options)
+    .then(response => response.json())
+    .then(function(data){
+      console.log(data)
+      randomQuote.textContent = "'" + data.content + "'"
+      localStorage.setItem("savedQuote", data.content)
+    })
+    .catch(err => console.error(err)); 
+}
+
