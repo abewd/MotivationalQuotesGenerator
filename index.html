@@ -31,43 +31,50 @@
               <p>~The Diary That Will Help You Achieve Your Goals~</p>
             </div>
 
-            <button id="modalBtn" class="btn btn-primary">Generate Quote and Photo!</button>
+            <button id="modalBtn" class="btn btn-primary">
+              Generate Quote and Photo!
+            </button>
           </div>
         </div>
       </div>
     </header>
 
-    <!-- delete header below  -->
-
     <!-- Here we will have the local storage text appear after input in the modal-->
     <!-- Open The Modal Button -->
-    
+
     <!-- The Modal -->
     <div id="myModal" class="modal">
-    <!-- Modal content -->
+      <!-- Modal content -->
       <div class="modal-content">
         <div class="modalh3">
           <h3>My Goals</h3>
           <span class="close">&times;</span>
         </div>
-        
-          <label for="userName">Name: </label>
-          <input id="userName" type="text" placeholder="Enter your name"
-          <label for="myGoal">Goals: </label>
-          <input id="myGoal" type="text" placeholder="Enter your goals">
-          <button id="submitGoal">Submit</button>
-        
+
+        <label for="userName">Name: </label>
+        <input id="userName" type="text" placeholder="Enter your name" />
+        <label for="myGoal">Goals: </label>
+        <input id="myGoal" type="text" placeholder="Enter your goals" />
+        <button id="submitGoal">Submit</button>
       </div>
     </div>
     <div class="localStorage">
-      <p>Hello <span id="savedUser">(name)</span>, your goal today is ...<span id="savedGoal">(insert goal here)</span></p>
+      <p>
+        Hello <span id="savedUser">(name)</span>, your goal today is ...<span
+          id="savedGoal"
+          >(insert goal here)</span
+        >
+      </p>
     </div>
 
     <!-- This is the main section where API1 will generate random background photos -->
     <div class="apiBackground">
       <main>
-        <img alt="backgroundImage" id="randomImg"/>
-        <p>Photo by <a id="creator" href="#">NAME</a> on <a id="imgLink" href="#">UNSPLASH</a></p>
+        <img alt="backgroundImage" id="randomImg" />
+        <p>
+          Photo by <a id="creator" href="#">NAME</a> on
+          <a id="imgLink" href="#">UNSPLASH</a>
+        </p>
 
         <!-- This is the main sectino where API2 will generate random text to go ontop of the random image -->
         <div class="apiText">
@@ -113,6 +120,7 @@
           </div>
 
           <!-- Submission via email entry -->
+          <!-- Project coming soon, not yet funcitonal -->
           <div class="col-md-5">
             <form>
               <fieldset class="form-group">
