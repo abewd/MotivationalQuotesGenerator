@@ -2,7 +2,7 @@
 
 This is a random quote and background image generator to motivate you and make you feel great, daily!
 
-Project Requirements
+## Project Requirements
 
 - use a CSS framework
 - Deploy the application through a github page link
@@ -12,28 +12,28 @@ Project Requirements
 - Have a clean repository
 - Have a quality readMe file
 
-Instructions
+## Instructions
 
 - As a user, I want to utilise and view 2 functional API's in the application
 - As a user, I want to easily identify CSS snippets by their headings
 - As a user, i want to use my application on multiple devices with varying screen sizes
 - As a user, I want to utilise modals instead of prompts
 
-Specifications
+## Specifications
 
-- Must use semantic HTML elements and proper indentatino
+- Must use semantic HTML elements and proper indentation
 - Use flexbox
 - Each CSS snippet must have a card0like layout
 - Each CSS snipet can be easily highlighed and edited
 
-Presentation Requirements
+## Presentation Requirements
 
 - Elevator pitch: Have a 1 minute presentation describing the application and its uses
 - Concept: What is your user story?
 - What is your motivation for the application?
 - Future updates?
 
-Technical Acceptance Criteria
+## Technical Acceptance Criteria
 We need to utilise 2 apis minimum (yet to be found)
 We will use a username and password in a local storage for users to login
 We can also use a local storage for a counter for how many diary entries or how many cars viewed (concept)
@@ -52,3 +52,12 @@ home page with the api 1 and api 2
 this will contain the image and quote generator
 (button: click to engage/refresh api1/2)
 footer: href socials and contacts inc emails
+
+## Usage
+Below is a screenshot of the deployed webpage
+![alt="MyPersonalizedDiary"](assets/images/diary-page.png)
+
+You can access the application at https://abewd.github.io/MyPersonalisedDiary
+
+## Contributing
+If you would like to contribute to the development of this application, you can head on to my GitHub at https://github.com/abewd/MyPersonalisedDiary.git !
